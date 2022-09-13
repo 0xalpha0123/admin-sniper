@@ -26,10 +26,8 @@ bot.command('start', async ctx => {
 
     bot.command('server', async ctx => {
         const groupName = getSearchGroupName(ctx.message.text.replace("/server", "").replace(/^\s+|\s+$/g,''));
-        console.log(ctx.message.text.replace("/server", "").replace(/^\s+|\s+$/g,''))
 
         let adminsList;
-        
 
         try {
             /* @link: https://gram.js.org/tl/channels/GetParticipants */
@@ -76,10 +74,8 @@ bot.command('start', async ctx => {
         catch ( error ) {
             console.log(error)
         }
-
     })
 })
-
 
 const getSearchGroupName = ( value ) => {
     const match = /.*webk\.telegram.*@(?<webClient>.+)$|.*t.me\/(?<shortLink>.+)$|^@(?<userName>.+)$/.exec( value );
