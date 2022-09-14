@@ -1,4 +1,4 @@
-# admin-sniper
+# admin-sniper-bot
 To find admins in the telegram group
 
 ## Commands
